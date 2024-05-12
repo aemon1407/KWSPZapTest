@@ -131,6 +131,7 @@ script-src, style-src, img-src, connect-src, frame-ancestors, font-src, media-sr
 
 ### <a name="jsl"/> f. JS Library
  #### Identify Vulnerabilities
+  - Identified as: Vulnerable JS Library
   - Risk Identified: Medium
   - ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/3d8a97a3-2f43-4eb7-8c42-4da51498509a)
   - Confidence Level: Low
