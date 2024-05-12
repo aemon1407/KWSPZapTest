@@ -116,7 +116,7 @@ MD5 Crypt & SHA256
     - **CVE-2018-14042**: This CVE is also related to the Linux kernel's 802.11 subsystem. It allows attackers within range to cause a denial of service (DoS) or potentially execute arbitrary code.
     - **CVE-2016-10735**: This CVE is associated with a vulnerability in the Linux kernel's packet socket implementation. It allows local users to cause a denial of service (crash) or possibly gain privileges via crafted system calls.
 
-  #### Prevention Vulnerabilities
+  #### Prevention of Vulnerabilities
    - To mitigate CWE-829, it's important for developers to carefully vet and validate the sources of external code included in their libraries, ensuring that only trusted and verified components are used to minimize the risk of including potentially harmful or malicious functionality.
    - Keeping libraries and dependencies up to date with security patches and using static analysis tools to scan for vulnerabilities can help identify and address such risks.
 
@@ -133,7 +133,23 @@ References:
 ### <a name="https"/> g. HTTPS Implementation (TLS/SSL)
 
 ### <a name="cookie"/> h. Cookie Poisoning
-
+ #### Identify Vulnerabilities
+  - Risk Level: Low
+  - Confidence Level: Medium
+  - Set-Cookie: __cflb
+  - CWE ID: 1275
+  - WASC ID: 13
+    
+ #### Evaluate Vulnerabilities
+  - A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.
+    
+  - There are two main ways CWE-1275 can manifest:
+    - Missing SameSite Attribute: The cookie doesn't have the SameSite attribute set at all. This means the browser might include the cookie with requests from any website, including potentially malicious ones.
+    - Incorrect SameSite Attribute Value: The cookie has the SameSite attribute set to a value that weakens the protection against CSRF attacks. For example, setting it to 'None' allows the browser to include the cookie with cross-site requests.
+    
+ #### Prevent Vulnerabilities
+  - Set the SameSite attribute to 'Strict' on all sensitive cookies. This ensures that the browser won't include the cookie with requests from other websites, significantly reducing the risk of CSRF attacks.
+ 
 ### <a name="xss"/> i. Potential XSS
 
 ### <a name="info"/> j. Information Disclosure
