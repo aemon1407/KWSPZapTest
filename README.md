@@ -46,7 +46,7 @@ Razer
 3. https://turingsecure.com/knowledge-base/issues/password-hash-disclosure/#:~:text=Description,guess%20the%20plain%20text%20password.
 4. https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html
 5. https://cwe.mitre.org/data/definitions/352.html
-6. 
+   
 ## <a name="desc"/> Brief Description 
 www.kwsp.gov.my is a government agency responsible for managing retirement savings plans for private sector workers in Malaysia. Members can also check for their EPF account balance, review their contribution history, update personal details and download forms for various transactions. The site also gives information on EPF policies, investment options and retirement planning resources. In general www.kwsp.gov.my is a vital tool in facilitating communication between the organization and its members, providing them with retirement savings information and services that are clear as well as reachable.
 
@@ -62,6 +62,7 @@ Due to its nature of handling fund, withdrawal request and storing Malaysian's d
 - The kind of alert is not detected by the ZAP.
   
 ### <a name="hash"/> b. Hash Disclosure
+![Hash](https://github.com/aemon1407/KWSPZapTest/assets/128023708/54451d83-9a1e-4d9c-bc85-e4ac25576663)
 #### Identify Vulnerabilities
 Hash Disclosure - MD5 Crypt
 - A hash was disclosed by the web server
@@ -88,8 +89,9 @@ MD5 Crypt & SHA256
 - Another way to prevent this vulnerabilities is to hash the passwords at all times and arrow a solid schema i.e. BCrypt, SHA-256, or PBKDF2. Also to make it difficult to decrypt one should hash passwords with a unique salt. Moreover among other things including rate limiting administrators are advised to takes steps to secure against brute force attacks.
 
 ### <a name="csrf"/> c. CSRF
+![CSRF](https://github.com/aemon1407/KWSPZapTest/assets/128023708/e5c0f71b-4f8d-4f15-b0ff-3320f194c223)
 #### Identify Vulnerabilities
-- Absence of Anti-CSRF Tokens
+Absence of Anti-CSRF Tokens
 - Risk Level: Medium
 - Confidence Level: Low
 - CWE ID: 352 (Cross-Site Request Forgery)
