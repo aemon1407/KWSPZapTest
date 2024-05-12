@@ -10,9 +10,9 @@ Razer
 ## Assigned Task
 |Member       |Appointed Task          |
 |-------------|------------------------|
-|Aiman Fathi  |Identify Vulnerabilities|
-|Safwan       |Evaluate Vulnerabilities|
-|Haniff       |Prevent Vulnerabilities |
+|Aiman Fathi Bin Mohd Fairuz |Identify, Evaluate and Prevent the alert of |
+|Safwan Bin Roslin           |Identify, Evaluate and Prevent the alert of JS Libaray, Cookie Poisoning, Potential XSS, Information Disclosure |
+|Muhammad Haniff bin Ismail  |Identify, Evaluate and Prevent the alert of |
 
 ## Table of Content
 1. [Brief Description](#desc)
@@ -149,14 +149,17 @@ References:
     - Incorrect SameSite Attribute Value: The cookie has the SameSite attribute set to a value that weakens the protection against CSRF attacks. For example, setting it to 'None' allows the browser to include the cookie with cross-site requests.
     
  #### Prevent Vulnerabilities
-  - Set the SameSite attribute to 'Strict' on all sensitive cookies. This ensures that the browser won't include the cookie with requests from other websites, significantly reducing the risk of CSRF attacks.
+  Set the SameSite attribute to 'Strict' on all sensitive cookies. This ensures that the browser won't include the cookie with requests from other websites, significantly reducing the risk of CSRF attacks.
 
  Reference: https://cwe.mitre.org/data/definitions/1275.html
  
 ### <a name="xss"/> i. Potential XSS
+ #### Identify Vulnerabilities
 
 ### <a name="info"/> j. Information Disclosure
  #### Identify Vulnerabilities
+ #### Evaluate Vulnerabilities
+#### Prevent Vulnerabilities
  
   1. Information Disclosure - Sensitive Information in URL
      - Risk Level: Informational
