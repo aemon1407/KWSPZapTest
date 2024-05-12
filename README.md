@@ -151,10 +151,14 @@ Other Info
  
 ### <a name="xss"/> i. Potential XSS
  #### Identify Vulnerabilities
-  
+ There is no alert found on OWASP ZAP and no risk level and CWE ID can be identified.
+ 
  #### Evaluate Vulnerabilities
+ Not available since there is https implementation for this website that can be seen at the URL of the website.
+ 
  #### Prevent Vulnerabilities
-
+ Not available for the website. However, the solution for this type of alert is to validate all input and sanitize output it before writing to any HTML attributes.
+ 
 ### <a name="info"/> j. Information Disclosure
  #### Identify Vulnerabilities
  
