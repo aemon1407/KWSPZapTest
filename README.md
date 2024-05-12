@@ -227,11 +227,6 @@ script-src, style-src, img-src, connect-src, frame-ancestors, font-src, media-sr
    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
    - Specify content sources individually and use specific directives to control content sources. This helps ensure that only trusted and authorized sources are allowed, reducing the risk of potential security vulnerabilities.
 
- References:
- - https://www.w3.org/TR/CSP/
- - https://caniuse.com/#search=content+security+policy
- - https://content-security-policy.com/
-
 ### <a name="jsl"/> f. JS Library
  #### Identify Vulnerabilities
   - Identified as: Vulnerable JS Library
