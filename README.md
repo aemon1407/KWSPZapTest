@@ -59,8 +59,12 @@ Due to its nature of handling fund, withdrawal request and storing Malaysian's d
 - CWE ID: 200 - The product exposes sensitive information to an actor that is not explicitly authorized to have access to that information.
 - Risk Level: High
 #### Evaluate Vulnerabilities
+- MD5 Crypt
+- 
 
 #### Prevention Vulnerabilities
+MD5 Crypt
+- 
 
 ### CSRF
 #### Identify Vulnerabilities
