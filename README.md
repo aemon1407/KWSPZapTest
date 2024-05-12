@@ -117,12 +117,12 @@ MD5 Crypt & SHA256
    - Other Info: The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
 script-src, style-src, img-src, connect-src, frame-ancestors, font-src, media-src, object-src, manifest-src, worker-src, form-action
 
-The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.
+     The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.
    
 
  #### Prevention Vulnerabilities
-    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
-    - Specify content sources individually and use specific directives to control content sources. This helps ensure that only trusted and authorized sources are allowed, reducing the risk of potential security vulnerabilities.
+   - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
+   - Specify content sources individually and use specific directives to control content sources. This helps ensure that only trusted and authorized sources are allowed, reducing the risk of potential security vulnerabilities.
 
  References:
  - https://www.w3.org/TR/CSP/
