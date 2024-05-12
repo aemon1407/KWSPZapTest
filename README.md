@@ -6,13 +6,13 @@ Razer
 |----------------------------|---------|
 |Aiman Fathi Bin Mohd Fairuz |2121549  |
 |Safwan                      |2113779  |
-|Ahli 3                      |121244   |
+|Muhammad Haniff bin Ismail  |2110619  |
 ## Assigned Task
 |Member       |Appointed Task          |
 |-------------|------------------------|
 |Aiman Fathi  |Identify Vulnerabilities|
 |Safwan       |Evaluate Vulnerabilities|
-|Ahli 3       |Prevent Vulnerabilities |
+|Haniff       |Prevent Vulnerabilities |
 
 ## Table of Content
 
