@@ -10,7 +10,7 @@ Razer
 ## Assigned Task
 |Member       |Appointed Task          |
 |-------------|------------------------|
-|Aiman Fathi Bin Mohd Fairuz |Identify, Evaluate and Prevent the alert of |
+|Aiman Fathi Bin Mohd Fairuz |Identify, Evaluate and Prevent the alert of Server OS and Server-Side Scripting, Hash Disclosure, CSRF |
 |Safwan Bin Roslin           |Identify, Evaluate and Prevent the alert of JS Library, Cookie Poisoning, Potential XSS, Information Disclosure |
 |Muhammad Haniff bin Ismail  |Identify, Evaluate and Prevent the alert of Secured Cookie, CSP, HTTPS Implementation(TLS/SSL) |
 
