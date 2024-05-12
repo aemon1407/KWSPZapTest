@@ -61,7 +61,7 @@ Due to its nature of handling fund, withdrawal request and storing Malaysian's d
 - The kind of alert is not detected by the ZAP, therefore, no need to evaluate the alert.
 #### Prevention Vulnerabilities
 
-### <a name="hash"/> Hash Disclosure
+### <a name="hash"/> b. Hash Disclosure
 #### Identify Vulnerabilities
 Hash Disclosure - MD5 Crypt
 - A hash was disclosed by the web server
@@ -87,26 +87,26 @@ MD5 Crypt & SHA256
 - Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser.
 - Another way to prevent this vulnerabilities is to hash the passwords at all times and arrow a solid schema i.e. BCrypt, SHA-256, or PBKDF2. Also to make it difficult to decrypt one should hash passwords with a unique salt. Moreover among other things including rate limiting administrators are advised to takes steps to secure against brute force attacks.
 
-### <a name="csrf"/> CSRF
+### <a name="csrf"/> c. CSRF
 #### Identify Vulnerabilities
 - This alert is not detected in www.kwsp.gov.my website using manual scan. Therefore, the risk level is not available.
 #### Evaluate Vulnerabilities
 - The kind of alert is not detected by the ZAP, therefore, no need to evaluate the alert.
 #### Prevention Vulnerabilities
 
-### <a name="seccoo"/> Secured Cookies
+### <a name="seccoo"/> d. Secured Cookies
 
-### <a name="csp"/> CSP
+### <a name="csp"/> e. CSP
 
-### <a name="jsl"/> JS Library
+### <a name="jsl"/> f. JS Library
 
-### <a name="https"/> HTTPS Implementation (TLS/SSL)
+### <a name="https"/> g. HTTPS Implementation (TLS/SSL)
 
-### <a name="cookie"/> Cookie Poisoning
+### <a name="cookie"/> h. Cookie Poisoning
 
-### <a name="xss"/> Potential XSS
+### <a name="xss"/> i. Potential XSS
 
-### <a name="info"/> Information Disclosure
+### <a name="info"/> j. Information Disclosure
 
 
 
