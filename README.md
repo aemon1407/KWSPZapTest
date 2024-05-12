@@ -30,6 +30,13 @@ Razer
 
 ## List of Figures
 
+1. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/3d8a97a3-2f43-4eb7-8c42-4da51498509a)
+2. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/2724d4ea-b5de-4728-9b70-967ab61fc59f)
+3. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/69ce572c-3c84-4950-abb4-ec3c7fc8c3b7)
+4. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/ac794df0-b8ad-42cd-a520-acee8b0e53a0)
+5. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/7873b92e-a815-4e63-bb43-afe03c3b5bd6)
+6. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/0f06439d-f781-4598-9673-4d4339c3b38d)
+
 ## List of Tables
 
 ## References
@@ -101,6 +108,7 @@ MD5 Crypt & SHA256
 ### <a name="jsl"/> f. JS Library
  #### Identify Vulnerabilities
   - Risk Identified: Medium
+  - ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/3d8a97a3-2f43-4eb7-8c42-4da51498509a)
   - Confidence Level: Low
   - Evidence: * Bootstrap v3.3.7
   - CWE ID: 829
@@ -135,6 +143,7 @@ References:
 ### <a name="cookie"/> h. Cookie Poisoning
  #### Identify Vulnerabilities
   - Identified as: Loosely Scoped Cookie
+  - ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/2724d4ea-b5de-4728-9b70-967ab61fc59f)
   - Risk Level: Informational
   - Confidence Level: Low
   - CWE ID: 565
@@ -163,6 +172,7 @@ Other Info
  #### Identify Vulnerabilities
  
   1. Information Disclosure - Sensitive Information in URL
+     - ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/69ce572c-3c84-4950-abb4-ec3c7fc8c3b7)
      - Risk Level: Informational
      - Confidence Level: Medium
      - Evidence: com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet:/o/com.liferay.product.navigation.user.personal.bar.web/css/main.css
@@ -170,6 +180,7 @@ Other Info
      - WASC: 13
        
   2. Information Disclosure - Suspicious Comments
+     - ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/ac794df0-b8ad-42cd-a520-acee8b0e53a0)
      - Risk Level: Informational
      - Confidence Level: Low
      - Evidence: from
