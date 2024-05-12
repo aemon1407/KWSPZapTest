@@ -37,6 +37,7 @@ Razer
 5. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/7873b92e-a815-4e63-bb43-afe03c3b5bd6)
 6. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/0f06439d-f781-4598-9673-4d4339c3b38d)
 
+
 ## List of Tables
 
 ## References
@@ -104,6 +105,16 @@ MD5 Crypt & SHA256
 ### <a name="seccoo"/> d. Secured Cookies
 
 ### <a name="csp"/> e. CSP
+ #### Identify Vulnerabilities
+   - Identified as: Wildcard Directive
+   - Risk Level: Medium
+   - Confidence Level: High
+   - CWE ID: 693
+   - WASC ID: 15
+
+ #### Evaluate Vulnerabilities
+
+ #### Prevention Vulnerabilities
 
 ### <a name="jsl"/> f. JS Library
  #### Identify Vulnerabilities
