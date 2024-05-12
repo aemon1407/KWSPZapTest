@@ -163,6 +163,14 @@ References:
 - https://cwe.mitre.org/data/definitions/829.html
 
 ### <a name="https"/> g. HTTPS Implementation (TLS/SSL)
+ #### Identify Vulnerabilities
+  - There is no alert found on OWASP ZAP and no risk level and CWE ID can be identified.
+
+ #### Evaluate Vulnerabilities
+  - Not available since there is https implementation for this website that can be seen at the URL of the website.
+
+ #### Prevention Vulnerabilities
+  - 
 
 ### <a name="cookie"/> h. Cookie Poisoning
  #### Identify Vulnerabilities
