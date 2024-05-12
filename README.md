@@ -134,32 +134,29 @@ References:
 
 ### <a name="cookie"/> h. Cookie Poisoning
  #### Identify Vulnerabilities
-  - Identified as: Cookie with SameSite Attribute None
-  - Risk Level: Low
-  - Confidence Level: Medium
-  - Evidence: Set-Cookie: __cflb
-  - CWE ID: 1275
-  - WASC ID: 13
+  - Identified as: Loosely Scoped Cookie
+  - Risk Level: Informational
+  - Confidence Level: Low
+  - CWE ID: 565
+  - WASC ID: 15
     
  #### Evaluate Vulnerabilities
-  - A cookie has been set with its SameSite attribute set to "none", which means that the cookie can be sent as a result of a 'cross-site' request. The SameSite attribute is an effective counter measure to cross-site request forgery, cross-site script inclusion, and timing attacks.
-    
-  - There are two main ways CWE-1275 can manifest:
-    - Missing SameSite Attribute: The cookie doesn't have the SameSite attribute set at all. This means the browser might include the cookie with requests from any website, including potentially malicious ones.
-    - Incorrect SameSite Attribute Value: The cookie has the SameSite attribute set to a value that weakens the protection against CSRF attacks. For example, setting it to 'None' allows the browser to include the cookie with cross-site requests.
+  This is called a cookie poisoning attack, and becomes exploitable when an attacker can manipulate the cookie in various ways. In some cases this will not be exploitable, however, allowing URL parameters to set cookie values is generally considered a bug. Cookies can be scoped by domain or path. This check is only concerned with domain scope.The domain scope applied to a cookie determines which domains can access it. For example, a cookie can be scoped strictly to a subdomain e.g. www.nottrusted.com, or loosely scoped to a parent domain e.g. nottrusted.com. In the latter case, any subdomain of nottrusted.com can access the cookie. Loosely scoped cookies are common in mega-applications like google.com and live.com. Cookies set from a subdomain like app.foo.bar are transmitted only to that domain by the browser. However, cookies scoped to a parent-level domain may be transmitted to the parent, or any subdomain of the parent.
     
  #### Prevent Vulnerabilities
-  Set the SameSite attribute to 'Strict' on all sensitive cookies. This ensures that the browser won't include the cookie with requests from other websites, significantly reducing the risk of CSRF attacks.
+ Do not allow user input to control cookie names and values. If some query string parameters must be set in cookie values, be sure to filter out semicolon's that can serve as name/value pair delimiters.
+Other Info
 
- Reference: https://cwe.mitre.org/data/definitions/1275.html
+ Reference: [https://cwe.mitre.org/data/definitions/1275.html](https://www.zaproxy.org/docs/alerts/10029/)
  
 ### <a name="xss"/> i. Potential XSS
  #### Identify Vulnerabilities
+  
+ #### Evaluate Vulnerabilities
+ #### Prevent Vulnerabilities
 
 ### <a name="info"/> j. Information Disclosure
  #### Identify Vulnerabilities
- #### Evaluate Vulnerabilities
-#### Prevent Vulnerabilities
  
   1. Information Disclosure - Sensitive Information in URL
      - Risk Level: Informational
