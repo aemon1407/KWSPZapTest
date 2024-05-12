@@ -160,7 +160,55 @@ Check the HTTP Referer header to see if the request originated from an expected 
    - WASC ID: 13
 
  #### Evaluate Vulnerabilities
+  1. Secured Cookies - Cookie No HttpOnly Flag
+   - The product uses a cookie to store sensitive information, but the cookie is not marked with the HttpOnly flag.
+   - The HttpOnly flag directs compatible browsers to prevent client-side script from accessing cookies. Including the HttpOnly flag in the Set-Cookie HTTP response header helps mitigate the risk associated with Cross-Site Scripting (XSS) where an attacker's script code might attempt to read the contents of a cookie and exfiltrate information obtained. When set, browsers that support the flag will not reveal the contents of the cookie to a third party via client-side script executed via XSS.
+
+  Related:
+   - CVE-2022-24045: Web application for a room automation system has client-side Javascript that sets a sensitive cookie without the HTTPOnly security attribute, allowing the cookie to be accessed.
+   - CVE-2014-3852: CMS written in Python does not include the HTTPOnly flag in a Set-Cookie header, allowing remote attackers to obtain potentially sensitive information via script access to this cookie.
+   - CVE-2015-4138: Appliance for managing encrypted communications does not use HttpOnly flag.
+
+  2. Secured Cookies - Cookie Without Secure Flag
+   - The Secure attribute for sensitive cookies in HTTPS sessions is not set, which could cause the user agent to send those cookies in plaintext over an HTTP session.
+
+  Related:
+   - CVE-2004-0462: A product does not set the Secure attribute for sensitive cookies in HTTPS sessions, which could cause the user agent to send those cookies in plaintext over an HTTP session with the product.
+   - CVE-2008-3663: A product does not set the secure flag for the session cookie in an https session, which can cause the cookie to be sent in http requests and make it easier for remote attackers to capture this cookie.
+   - CVE-2008-3662: A product does not set the secure flag for the session cookie in an https session, which can cause the cookie to be sent in http requests and make it easier for remote attackers to capture this cookie.
+   - CVE-2008-0128: A product does not set the secure flag for a cookie in an https session, which can cause the cookie to be sent in http requests and make it easier for remote attackers to capture this cookie.
+
+  3. Secured Cookies - Cookie with SameSite Attribute None
+   - The SameSite attribute for sensitive cookies is not set, or an insecure value is used.
+   - The SameSite attribute controls how cookies are sent for cross-domain requests. This attribute may have three values: 'Lax', 'Strict', or 'None'. If the 'None' value is used, a website may create a cross-domain POST HTTP request to another website, and the browser automatically adds cookies to this request. This may lead to Cross-Site-Request-Forgery (CSRF) attacks if there are no additional protections in place (such as Anti-CSRF tokens).
+
+  4. Secured Cookies - Cookie without SameSite Attribute
+   - Cookie Without SameSite Attribute can lead to a Cross-site Request Forgery (CSRF) attack.
+
+   - “SameSite” attribute allows to declare whether the cookie should be restricted to a first-party or same-site context. Meaning that all the cookies without the “SameSite” attribute would be added to any requests initiated to any other website. This allows attackers to abuse sessions belonging to an authorized user. This browser behavior can also be misused for other purposes like tracking users or advertising.
+
  #### Prevention Vulnerabilities
+  1. Secured Cookies - Cookie No HttpOnly Flag
+   - Leverage the HttpOnly flag when setting a sensitive cookie in a response.
+
+  2. Secured Cookies - Cookie Without Secure Flag
+   - Always set the secure attribute when the cookie should sent via HTTPS only.
+
+  3. Secured Cookies - Cookie with SameSite Attribute None
+   - Set the SameSite attribute of a sensitive cookie to 'Lax' or 'Strict'. This instructs the browser to apply this cookie only to same-domain requests, which provides a good Defense in Depth against CSRF attacks. When the 'Lax' value is in use, cookies are also sent for top-level cross-domain navigation via HTTP GET, HEAD, OPTIONS, and TRACE methods, but not for other HTTP methods that are more like to cause side-effects of state mutation.
+
+  4. Secured Cookies - Cookie without SameSite Attribute
+   - instruct browsers to control if cookies should be sent along with requests initiated by third-party websites. “SameSite” attribute on a cookie provides three ways to control its behavior:
+
+      - Lax - Cookies are allowed to be sent along with top-level navigations. This is the default value in modern browsers.
+      - Strict - Cookies will be sent only in a first-party context.
+      - None - Cookies will be sent in all contexts. None requires the “Secure” attribute in latest browser versions.
+
+  References:
+   - https://cwe.mitre.org/data/definitions/1004.html
+   - https://cwe.mitre.org/data/definitions/614.html
+   - https://cwe.mitre.org/data/definitions/1275.html
+   - https://scanrepeat.com/web-security-knowledge-base/cookie-without-samesite-attribute#:~:text=%E2%80%9CSameSite%E2%80%9D%20attribute%20allows%20to%20declare,belonging%20to%20an%20authorized%20user.
 
 ### <a name="csp"/> e. CSP
  #### Identify Vulnerabilities
