@@ -22,7 +22,8 @@ Razer
 
 ## References
 1. https://www.kwsp.gov.my/ms/ahli/gambaran-keseluruhan
-2. 
+2. https://openwall.info/wiki/john/sample-hashes
+3. https://turingsecure.com/knowledge-base/issues/password-hash-disclosure/#:~:text=Description,guess%20the%20plain%20text%20password.
 ## Brief Description 
 www.kwsp.gov.my is a government agency responsible for managing retirement savings plans for private sector workers in Malaysia. Members can also check for their EPF account balance, review their contribution history, update personal details and download forms for various transactions. The site also gives information on EPF policies, investment options and retirement planning resources. In general www.kwsp.gov.my is a vital tool in facilitating communication between the organization and its members, providing them with retirement savings information and services that are clear as well as reachable.
 
@@ -50,27 +51,35 @@ Due to its nature of handling fund, withdrawal request and storing Malaysian's d
 
 ### Hash Disclosure
 #### Identify Vulnerabilities
-##### Hash Disclosure - MD5 Crypt
+Hash Disclosure - MD5 Crypt
 - A hash was disclosed by the web server
 - CWE ID: 200 - The product exposes sensitive information to an actor that is not explicitly authorized to have access to that information.
 - Risk Level: High
-##### Hash Disclosure - SHA256 Crypt
+  
+Hash Disclosure - SHA256 Crypt
 - A hash was disclosed by the web server. - SHA-256 Crypt
 - CWE ID: 200 - The product exposes sensitive information to an actor that is not explicitly authorized to have access to that information.
 - Risk Level: High
+  
 #### Evaluate Vulnerabilities
-- MD5 Crypt
-- 
+MD5 Crypt
+- The hashed data was exposed to someone who shouldn't have access to it. This could be due to a misconfiguration, a vulnerability in the web server or application, or some other security issue.
+-  The alert indicates a potential security vulnerability where hashed data, possibly containing sensitive information, was inadvertently disclosed by the web server. This could lead to security risks if the disclosed hashes are used maliciously to reverse-engineer the original sensitive data, such as passwords.
+
+SHA256 Crypt
+- The alert for SHA256 is the same as MD5 Crypt, it could potentially be reversed to reveal the original sensitive information. However, due to the stronger cryptographic properties of SHA-256, it would be significantly harder to reverse or brute-force the hash to retrieve the original data.
+-  Just like MD5 Crypt, it indicates a potential security vulnerability where hashed data, possibly containing sensitive information, was inadvertently disclosed by the web server. This could lead to security risks if the disclosed hashes are used maliciously to reverse-engineer the original sensitive data, such as passwords.
 
 #### Prevention Vulnerabilities
-MD5 Crypt
-- 
+MD5 Crypt & SHA256
+- Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser.
+- Another way to prevent this vulnerabilities is to hash the passwords at all times and arrow a solid schema i.e. BCrypt, SHA-256, or PBKDF2. Also to make it difficult to decrypt one should hash passwords with a unique salt. Moreover among other things including rate limiting administrators are advised to takes steps to secure against brute force attacks.
 
 ### CSRF
 #### Identify Vulnerabilities
-
+- This alert is not detected in www.kwsp.gov.my website using manual scan. Therefore, the risk level is not available.
 #### Evaluate Vulnerabilities
-
+- The kind of alert is not detected by the ZAP, therefore, no need to evaluate the alert.
 #### Prevention Vulnerabilities
 
 ### Secured Cookies
