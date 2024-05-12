@@ -37,9 +37,6 @@ Razer
 5. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/7873b92e-a815-4e63-bb43-afe03c3b5bd6)
 6. ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/0f06439d-f781-4598-9673-4d4339c3b38d)
 
-
-## List of Tables
-
 ## References
 1. https://www.kwsp.gov.my/ms/ahli/gambaran-keseluruhan
 2. https://openwall.info/wiki/john/sample-hashes
