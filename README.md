@@ -17,6 +17,16 @@ Razer
 ## Table of Content
 1. [Brief Description](#desc)
 2. [Result of Testing](#reslt)
+   1. [Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.](#server)
+   2. [Hash Disclosure](#hash)
+   3. [CSRF](#csrf)
+   4. [Secured Cookies](#seccoo)
+   5. [CSP](#csp)
+   6. [JS Library](#jsl)
+   7. [HTTPS Implementation (TLS/SSL)](#https)
+   8. [Cookie Poisoning](#cookie)
+   9. [Potential XSS](#xss)
+   10. [Information Disclosure](#info)
 
 ## List of Figures
 
@@ -43,15 +53,15 @@ Due to its nature of handling fund, withdrawal request and storing Malaysian's d
 |CSP: Header not set                          |Medium     |
 |Information Disclosure - Suspicious Comment  |Medium     |
 
-## Result of Testing
-### a. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.
+## <a name="reslt"/> Result of Testing
+### <a name="server"/> a. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.
 #### Identify Vulnerabilities
 - This alert is not detected in www.kwsp.gov.my website using manual scan. Therefore, the risk level is not available.
 #### Evaluate Vulnerabilities
 - The kind of alert is not detected by the ZAP, therefore, no need to evaluate the alert.
 #### Prevention Vulnerabilities
 
-### Hash Disclosure
+### <a name="hash"/> Hash Disclosure
 #### Identify Vulnerabilities
 Hash Disclosure - MD5 Crypt
 - A hash was disclosed by the web server
@@ -77,26 +87,26 @@ MD5 Crypt & SHA256
 - Ensure that hashes that are used to protect credentials or other resources are not leaked by the web server or database. There is typically no requirement for password hashes to be accessible to the web browser.
 - Another way to prevent this vulnerabilities is to hash the passwords at all times and arrow a solid schema i.e. BCrypt, SHA-256, or PBKDF2. Also to make it difficult to decrypt one should hash passwords with a unique salt. Moreover among other things including rate limiting administrators are advised to takes steps to secure against brute force attacks.
 
-### CSRF
+### <a name="csrf"/> CSRF
 #### Identify Vulnerabilities
 - This alert is not detected in www.kwsp.gov.my website using manual scan. Therefore, the risk level is not available.
 #### Evaluate Vulnerabilities
 - The kind of alert is not detected by the ZAP, therefore, no need to evaluate the alert.
 #### Prevention Vulnerabilities
 
-### Secured Cookies
+### <a name="seccoo"/> Secured Cookies
 
-### CSP
+### <a name="csp"/> CSP
 
-### JS Library
+### <a name="jsl"/> JS Library
 
-### HTTPS Implementation (TLS/SSL)
+### <a name="https"/> HTTPS Implementation (TLS/SSL)
 
-### Cookie Poisoning
+### <a name="cookie"/> Cookie Poisoning
 
-### Potential XSS
+### <a name="xss"/> Potential XSS
 
-### Information Disclosure
+### <a name="info"/> Information Disclosure
 
 
 
