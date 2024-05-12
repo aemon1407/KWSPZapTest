@@ -113,8 +113,21 @@ MD5 Crypt & SHA256
    - WASC ID: 15
 
  #### Evaluate Vulnerabilities
+   - Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
+   - Other Info: The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
+script-src, style-src, img-src, connect-src, frame-ancestors, font-src, media-src, object-src, manifest-src, worker-src, form-action
+
+The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.
+   
 
  #### Prevention Vulnerabilities
+    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
+    - Specify content sources individually and use specific directives to control content sources. This helps ensure that only trusted and authorized sources are allowed, reducing the risk of potential security vulnerabilities.
+
+ References:
+ - https://www.w3.org/TR/CSP/
+ - https://caniuse.com/#search=content+security+policy
+ - https://content-security-policy.com/
 
 ### <a name="jsl"/> f. JS Library
  #### Identify Vulnerabilities
