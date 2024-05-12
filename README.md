@@ -12,7 +12,7 @@ Razer
 |-------------|------------------------|
 |Aiman Fathi Bin Mohd Fairuz |Identify, Evaluate and Prevent the alert of |
 |Safwan Bin Roslin           |Identify, Evaluate and Prevent the alert of JS Libaray, Cookie Poisoning, Potential XSS, Information Disclosure |
-|Muhammad Haniff bin Ismail  |Identify, Evaluate and Prevent the alert of |
+|Muhammad Haniff bin Ismail  |Identify, Evaluate and Prevent the alert of Secured Cookie, CSP, HTTPS Implementation(TLS/SSL) |
 
 ## Table of Content
 1. [Brief Description](#desc)
