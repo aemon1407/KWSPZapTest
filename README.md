@@ -212,7 +212,6 @@ References:
     
  #### Prevent Vulnerabilities
  Do not allow user input to control cookie names and values. If some query string parameters must be set in cookie values, be sure to filter out semicolon's that can serve as name/value pair delimiters.
-Other Info
 
  Reference: [https://cwe.mitre.org/data/definitions/1275.html](https://www.zaproxy.org/docs/alerts/10029/)
  
