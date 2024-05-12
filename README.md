@@ -130,6 +130,37 @@ Phase: Implementation
 Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.
 
 ### <a name="seccoo"/> d. Secured Cookies
+ #### Identify Vulnerabilities
+  1. Secured Cookies - Cookie No HttpOnly Flag
+   - Risk Level: Low
+   - Confidence Level: Medium
+   - Evidence: Set-Cookie: test_cookie
+   - CWE ID: 1004
+   - WASC ID: 13
+
+  2. Secured Cookies - Cookie Without Secure Flag
+   - Risk Level: Low
+   - Confidence Level: Medium
+   - Evidence: Set-Cookie: __cflb
+   - CWE ID: 614
+   - WASC ID: 13
+
+  3. Secured Cookies - Cookie with SameSite Attribute None
+   - Risk Level: Low
+   - Confidence Level: Medium
+   - Evidence: Set-Cookie: __cf_bm
+   - CWE ID: 1275
+   - WASC ID: 13
+
+  4. Secured Cookies - Cookie without SameSite Attribute
+   - Risk Level: Low
+   - Confidence Level: Medium
+   - Evidence: Set-Cookie: myepfcookie
+   - CWE ID: 1275
+   - WASC ID: 13
+
+ #### Evaluate Vulnerabilities
+ #### Prevention Vulnerabilities
 
 ### <a name="csp"/> e. CSP
  #### Identify Vulnerabilities
