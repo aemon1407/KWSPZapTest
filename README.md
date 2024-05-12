@@ -5,7 +5,7 @@ Razer
 |Member                      |Matric ID|
 |----------------------------|---------|
 |Aiman Fathi Bin Mohd Fairuz |2121549  |
-|Safwan                      |2113779  |
+|Safwan Bin Roslin           |2113779  |
 |Muhammad Haniff bin Ismail  |2110619  |
 ## Assigned Task
 |Member       |Appointed Task          |
@@ -99,6 +99,36 @@ MD5 Crypt & SHA256
 ### <a name="csp"/> e. CSP
 
 ### <a name="jsl"/> f. JS Library
+ #### Identify Vulnerabilities
+  - Risk Identified: Medium
+  - Confidence Level: Low
+  - Evidence: * Bootstrap v3.3.7
+  - CWE ID: 829
+
+ #### Evaluate Vulnerabilities
+  - CWE-829 refers to the "Inclusion of Functionality from Untrusted Control Sphere" vulnerability. This CWE typically applies to situations where a software component or library includes functionality from a source that is not fully trusted or from an untrusted control sphere. In the context of JavaScript libraries, CWE-829 can manifest when a library incorporates code or features from sources that are not verified or could potentially be compromised.
+    
+  - Related:
+    - **CVE-2018-14041**: This CVE refers to a vulnerability in the Linux kernel's 802.11 subsystem. It could allow an attacker within range to cause a denial of service (DoS) or potentially execute arbitrary code.
+    - **CVE-2019-8331**: This CVE pertains to a vulnerability in the TYPO3 extension "rte_ckeditor." It allows remote attackers to conduct cross-site scripting (XSS) attacks via a crafted URL.
+    - **CVE-2018-20677**: This CVE involves a vulnerability in the node-forge npm package before version 0.7.5. It allows remote attackers to conduct XML External Entity (XXE) attacks via a crafted XML document.
+    - **CVE-2018-20676**: Similar to CVE-2018-20677, this CVE involves a vulnerability in the node-forge npm package before version 0.7.5. It allows remote attackers to conduct XML External Entity (XXE) attacks via a crafted XML document.
+    - **CVE-2018-14042**: This CVE is also related to the Linux kernel's 802.11 subsystem. It allows attackers within range to cause a denial of service (DoS) or potentially execute arbitrary code.
+    - **CVE-2016-10735**: This CVE is associated with a vulnerability in the Linux kernel's packet socket implementation. It allows local users to cause a denial of service (crash) or possibly gain privileges via crafted system calls.
+
+  #### Prevention Vulnerabilities
+   - To mitigate CWE-829, it's important for developers to carefully vet and validate the sources of external code included in their libraries, ensuring that only trusted and verified components are used to minimize the risk of including potentially harmful or malicious functionality.
+   - Keeping libraries and dependencies up to date with security patches and using static analysis tools to scan for vulnerabilities can help identify and address such risks.
+
+References:
+- https://nvd.nist.gov/vuln/detail/CVE-2018-14041
+- https://nvd.nist.gov/vuln/detail/CVE-2019-8331
+- https://nvd.nist.gov/vuln/detail/CVE-2018-20677
+- https://nvd.nist.gov/vuln/detail/CVE-2018-20676
+- https://nvd.nist.gov/vuln/detail/CVE-2018-14042
+- https://nvd.nist.gov/vuln/detail/CVE-2016-10735
+- https://owasp.org/Top10/A06_2021-Vulnerable_and_Outdated_Components/
+- https://cwe.mitre.org/data/definitions/829.html
 
 ### <a name="https"/> g. HTTPS Implementation (TLS/SSL)
 
