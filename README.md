@@ -209,23 +209,40 @@ Check the HTTP Referer header to see if the request originated from an expected 
 
 ### <a name="csp"/> e. CSP
  #### Identify Vulnerabilities
-   - Identified as: Wildcard Directive
+  1. CSP - Wildcard Directive
+   - Risk Level: Medium
+   - Confidence Level: High
+   - CWE ID: 693
+   - WASC ID: 15
+
+  2. CSP - Header Not Set
    - Risk Level: Medium
    - Confidence Level: High
    - CWE ID: 693
    - WASC ID: 15
 
  #### Evaluate Vulnerabilities
+  1. CSP - Wildcard Directive
    - Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks. Including (but not limited to) Cross Site Scripting (XSS), and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.
    - Other Info: The following directives either allow wildcard sources (or ancestors), are not defined, or are overly broadly defined: 
 script-src, style-src, img-src, connect-src, frame-ancestors, font-src, media-src, object-src, manifest-src, worker-src, form-action
 
      The directive(s): frame-ancestors, form-action are among the directives that do not fallback to default-src, missing/excluding them is the same as allowing anything.
-   
+
+  2. CSP - Header Not Set
+   - Content Security Policy (CSP) adds a layer of security which helps to detect and mitigate certain types of attacks such as Cross Site Scripting (XSS) and data injection attacks. Hackers use XSS attacks to trick trusted websites into delivering malicious content. The browser executes all code from trusted origin and can’t differentiate between legitimate and malicious code, so any injected code is executed as well.  
 
  #### Prevention Vulnerabilities
+  1. CSP - Wildcard Directive
    - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
    - Specify content sources individually and use specific directives to control content sources. This helps ensure that only trusted and authorized sources are allowed, reducing the risk of potential security vulnerabilities.
+
+  2. CSP - Header Not Set
+   - configure your web server to return the Content-Security-Policy HTTP Header and giving it values to control what resources the browser is allowed to load for your page.
+
+  References:
+   - https://www.zaproxy.org/docs/alerts/10038-1/
+   - https://scanrepeat.com/web-security-knowledge-base/content-security-policy-csp-header-not-set#:~:text=To%20fix%20Content%20Security%20Policy%20(CSP)%20Header%20Not%20Set%20you,to%20load%20for%20your%20page.
 
 ### <a name="jsl"/> f. JS Library
  #### Identify Vulnerabilities
