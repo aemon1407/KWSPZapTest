@@ -134,9 +134,10 @@ References:
 
 ### <a name="cookie"/> h. Cookie Poisoning
  #### Identify Vulnerabilities
+  - Identified as: Cookie with SameSite Attribute None
   - Risk Level: Low
   - Confidence Level: Medium
-  - Set-Cookie: __cflb
+  - Evidence: Set-Cookie: __cflb
   - CWE ID: 1275
   - WASC ID: 13
     
@@ -149,10 +150,50 @@ References:
     
  #### Prevent Vulnerabilities
   - Set the SameSite attribute to 'Strict' on all sensitive cookies. This ensures that the browser won't include the cookie with requests from other websites, significantly reducing the risk of CSRF attacks.
+
+ Reference: https://cwe.mitre.org/data/definitions/1275.html
  
 ### <a name="xss"/> i. Potential XSS
 
 ### <a name="info"/> j. Information Disclosure
+ #### Identify Vulnerabilities
+ 
+  1. Information Disclosure - Sensitive Information in URL
+     - Risk Level: Informational
+     - Confidence Level: Medium
+     - Evidence: com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet:/o/com.liferay.product.navigation.user.personal.bar.web/css/main.css
+     - CWE ID: 200
+     - WASC: 13
+       
+  2. Information Disclosure - Suspicious Comments
+     - Risk Level: Informational
+     - Confidence Level: Low
+     - Evidence: from
+     - CWE ID: 200
+     - WASC: 13
+       
+ #### Evaluate Vulnerabilities
+
+   1. Information Disclosure - Sensitive Information in URL
+      - The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment
+      - Other Info 
+      ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/7873b92e-a815-4e63-bb43-afe03c3b5bd6)
+
+  2. Information Disclosure - Suspicious Comments
+     - The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.
+     - Other Info
+       ![image](https://github.com/aemon1407/KWSPZapTest/assets/106056077/0f06439d-f781-4598-9673-4d4339c3b38d)
+
+  **CWE-200** stands for "Exposure of Sensitive Information to an Unauthorized Actor". It's a general classification in the Common Weakness Enumeration (CWE) list  used for software security concerns. Information exposure can have serious consequences.  If personal information (like financial data or health records) is leaked, it can damage a person's reputation or even lead to identity theft. For businesses, it can cause financial losses and reputational harm.
+
+ #### Prevent Vulnerabilities
+
+   1. Information Disclosure - Sensitive Information in URL
+       - Do not pass sensitive information in URLs.
+
+   2. Information Disclosure - Suspicious Comments
+       - Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.
+ 
 
 
 
