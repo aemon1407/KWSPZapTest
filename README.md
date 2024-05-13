@@ -234,8 +234,8 @@ script-src, style-src, img-src, connect-src, frame-ancestors, font-src, media-sr
 
  #### Prevention Vulnerabilities
   1. CSP - Wildcard Directive
-   - Ensure that your web server, application server, load balancer, etc. is properly configured to set the Content-Security-Policy header.
-   - Specify content sources individually and use specific directives to control content sources. This helps ensure that only trusted and authorized sources are allowed, reducing the risk of potential security vulnerabilities.
+   - Avoid using wildcards whenever possible. The goal of CSP is to be specific about allowed sources.
+   - Use Hashing, if you must use a wildcard for a specific source (e.g., a CDN serving content from multiple subdomains), consider using cryptographic hashes (like script-src 'sha256-yourHash' https://cdn.example.com'). This ensures only scripts with the specific hash can load, even from the allowed domain.
 
   2. CSP - Header Not Set
    - configure your web server to return the Content-Security-Policy HTTP Header and giving it values to control what resources the browser is allowed to load for your page.
