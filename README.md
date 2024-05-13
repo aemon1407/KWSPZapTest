@@ -50,6 +50,8 @@ www.kwsp.gov.my is a government agency responsible for managing retirement savin
 Due to its nature of handling fund, withdrawal request and storing Malaysian's data, it is important for KWSP to have a strong and trusted security to prevent any unwanted issues such as data breached, unauthorized withdrawal etc. Therefore, our case study purpose is to do security testing using OWASP ZAP on www.kwsp.gov.my to see if the website is secure and identify any potential risks.
 
 ## <a name="reslt"/> Result of Testing
+
+Aiman Fathi Bin Mohd Fairuz (2121549)
 ### <a name="server"/> a. Server OS and Server-Side Scripting used (Windows or Linux, PHP or ASP.net or JavaScript, etc.
 #### Identify Vulnerabilities
 - This alert is not detected in www.kwsp.gov.my website using manual scan. 
